@@ -380,7 +380,7 @@ export default function TenantDashboard() {
                                                     {order.status === "Sendo preparado" && (
                                                         <button
                                                             onClick={() => updateOrderStatus(order.id, "A caminho")}
-                                                            className="px-3 py-1.5 bg-yellow-500 text-slate-900 text-xs font-black rounded-xl hover:bg-yellow-600 transition-colors shadow-xs"
+                                                            className="px-3 py-1.5 bg-yellow-500 text-white text-xs font-black rounded-xl hover:bg-yellow-600 transition-colors shadow-xs"
                                                         >
                                                             Despachar
                                                         </button>
