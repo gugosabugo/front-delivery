@@ -45,4 +45,4 @@ export interface Coupon {
     usedCount: number;
 }
 
-export type TabType = "pedidos" | "historico" | "produtos" | "cupons" | "pagamentos" | "entregas" | "financeiro" | "personalizacao";
+export type TabType = "pedidos" | "historico" | "produtos" | "cupons" | "clientes" | "pagamentos" | "entregas" | "financeiro" | "personalizacao";

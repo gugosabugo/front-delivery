@@ -16,6 +16,7 @@ import DeliveryAreasTab from "@/components/tenant/DeliveryAreasTab";
 import FinancialTab from "@/components/tenant/FinancialTab";
 import OrderHistoryTab from "@/components/tenant/OrderHistoryTab";
 import CouponsTab from "@/components/tenant/CouponsTab";
+import CustomersTab from "@/components/tenant/CustomersTab";
 
 export default function TenantDashboard() {
     const [activeTab, setActiveTab] = useState<TabType>("pedidos");
@@ -168,6 +169,10 @@ export default function TenantDashboard() {
                             <CouponsTab
                                 coupons={coupons}
                                 setCoupons={setCoupons} />
+                        )}
+
+                        {activeTab === "clientes" && (
+                            <CustomersTab orders={orders} />
                         )}
 
                         {activeTab === "pagamentos" && <PaymentMethodsTab />}

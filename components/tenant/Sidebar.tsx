@@ -1,7 +1,7 @@
 // components/tenant/Sidebar.tsx
 "use client";
 
-import { ClipboardList, Package, Settings, CreditCard, MapPin, DollarSign, Ticket, History } from "lucide-react";
+import { ClipboardList, Package, Settings, CreditCard, MapPin, DollarSign, Ticket, History, Users} from "lucide-react";
 import { TabType } from "@/types/tenant";
 
 interface SidebarProps {
@@ -23,10 +23,11 @@ export default function Sidebar({ activeTab, setActiveTab, pendingOrdersCount }:
         { id: "historico", name: "Histórico de Pedidos", icon: <History size={18} /> },
         { id: "produtos", name: "Produtos & Categorias", icon: <Package size={18} /> },
         { id: "cupons", name: "Cupons de Desconto", icon: <Ticket size={18} /> },
+        { id: "clientes", name: "Meus Clientes", icon: <Users size={18} /> }, // <--- Adicionado aqui
         { id: "pagamentos", name: "Formas de Pagamento", icon: <CreditCard size={18} /> },
         { id: "entregas", name: "Regiões de Entrega", icon: <MapPin size={18} /> },
         { id: "financeiro", name: "Relatório Financeiro", icon: <DollarSign size={18} /> },
-        { id: "personalizacao", name: "Configurar Loja", icon: <Settings size={18} /> }, // <--- Movido para o final
+        { id: "personalizacao", name: "Configurar Loja", icon: <Settings size={18} /> },
     ];
 
     return (
@@ -35,11 +36,10 @@ export default function Sidebar({ activeTab, setActiveTab, pendingOrdersCount }:
                 <button
                     key={item.id}
                     onClick={() => setActiveTab(item.id)}
-                    className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-bold transition-all cursor-pointer ${
-                        activeTab === item.id 
-                            ? "bg-slate-900 text-white shadow-sm" 
+                    className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-sm font-bold transition-all cursor-pointer ${activeTab === item.id
+                            ? "bg-slate-900 text-white shadow-sm"
                             : "text-slate-600 hover:bg-slate-200/60"
-                    }`}
+                        }`}
                 >
                     <div className="flex items-center gap-3">
                         {item.icon}
