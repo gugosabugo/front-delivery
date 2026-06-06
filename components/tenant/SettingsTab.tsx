@@ -62,13 +62,9 @@ export default function SettingsTab({
             <div className="bg-white border border-slate-200 p-6 rounded-xl shadow-xs space-y-6">
                 <h3 className="text-sm font-bold text-slate-900">Configurações Gerais</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
+                    <div className="sm:col-span-2">
                         <label className="block text-[11px] font-bold text-slate-500 uppercase mb-1">Nome Fantasia</label>
                         <input type="text" value={storeName} onChange={(e) => setStoreName(e.target.value)} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none" />
-                    </div>
-                    <div>
-                        <label className="block text-[11px] font-bold text-slate-500 uppercase mb-1">Taxa de Entrega Padrão</label>
-                        <input type="text" value={deliveryFee} onChange={(e) => setDeliveryFee(e.target.value)} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none" />
                     </div>
                     <div className="sm:col-span-2">
                         <label className="block text-[11px] font-bold text-slate-500 uppercase mb-1">Tempo de Entrega Estimado</label>

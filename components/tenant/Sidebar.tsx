@@ -1,6 +1,7 @@
+// components/tenant/Sidebar.tsx
 "use client";
 
-import { ClipboardList, Package, Settings, CreditCard, MapPin, DollarSign } from "lucide-react";
+import { ClipboardList, Package, Settings, CreditCard, MapPin, DollarSign, Ticket, History } from "lucide-react";
 import { TabType } from "@/types/tenant";
 
 interface SidebarProps {
@@ -9,22 +10,23 @@ interface SidebarProps {
     pendingOrdersCount: number;
 }
 
-// Interface para definir explicitamente que 'badge' é opcional em qualquer item
 interface MenuItem {
     id: TabType;
     name: string;
     icon: React.ReactNode;
-    badge?: number; // O sinal '?' resolve o problema indicando que pode ou não existir
+    badge?: number;
 }
 
 export default function Sidebar({ activeTab, setActiveTab, pendingOrdersCount }: SidebarProps) {
     const menuItems: MenuItem[] = [
-        { id: "pedidos", name: "Pedidos", icon: <ClipboardList size={18} />, badge: pendingOrdersCount },
+        { id: "pedidos", name: "Pedidos Ativos", icon: <ClipboardList size={18} />, badge: pendingOrdersCount },
+        { id: "historico", name: "Histórico de Pedidos", icon: <History size={18} /> },
         { id: "produtos", name: "Produtos & Categorias", icon: <Package size={18} /> },
-        { id: "personalizacao", name: "Configurar Loja", icon: <Settings size={18} /> },
+        { id: "cupons", name: "Cupons de Desconto", icon: <Ticket size={18} /> },
         { id: "pagamentos", name: "Formas de Pagamento", icon: <CreditCard size={18} /> },
         { id: "entregas", name: "Regiões de Entrega", icon: <MapPin size={18} /> },
         { id: "financeiro", name: "Relatório Financeiro", icon: <DollarSign size={18} /> },
+        { id: "personalizacao", name: "Configurar Loja", icon: <Settings size={18} /> }, // <--- Movido para o final
     ];
 
     return (
