@@ -6,7 +6,7 @@ import {
   ShoppingBag, Plus, Minus, Clock, DollarSign, ChevronRight, X, Check,
   MessageSquare, UtensilsCrossed, ArrowLeft, MapPin, CreditCard, Smile, Trash2,
   QrCode, Copy, ShieldCheck, Lock, Smartphone, RefreshCw, ChevronDown, ChevronUp,
-  CheckCircle2, MessageCircle, Truck, Store, ClipboardList, Sparkles
+  CheckCircle2, MessageCircle, Truck, Store, ClipboardList,
 } from "lucide-react";
 
 // Interfaces do Sistema
