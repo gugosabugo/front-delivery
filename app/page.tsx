@@ -77,7 +77,7 @@ export default function LoginPage() {
                         </div>
 
                         <p className="text-xs text-zinc-500">
-                            © {new Date().getFullYear()} MenuBuilder.io
+                            © {new Date().getFullYear()} Eatly
                         </p>
                     </div>
                 </section>
@@ -93,7 +93,7 @@ export default function LoginPage() {
 
                             <div>
                                 <span className="text-lg font-bold tracking-tight text-black">
-                                    MenuBuilder
+                                    Eatly
                                 </span>
                                 <span className="text-lg font-bold text-yellow-500">
                                     .io
